@@ -15,12 +15,24 @@
     <p>Copy the above url and send it to your friend. Then both should open same video file from their device by pressing the 'CHOOSE VIDEO' button. And that's it!</p>
     <!-- input video -->
     <video id="localVideo" controls></video>
-    <input hidden type="file" id="fileInput" accept="video/*">
-    
+    <div id="choose-video">
+        <input hidden type="file" id="fileInput" accept="video/*">
+        <br>
+        <label for="fileInput" class="mdc-button mdc-button--raised">
+            <span class="mdc-button__label">Choose Video</span>
+        </label>
+    </div>
     <br>
-    <label for="fileInput" class="mdc-button mdc-button--raised">
-        <span class="mdc-button__label">Choose Video</span>
-    </label>
+    <div id="stream-link">
+        <input type="text" id="streamInput" class="text-input" placeholder="Stream Link">
+        <br>
+        <button class="mdc-button mdc-button--raised" id="streamInputButton">
+            <span class="mdc-button__label">Stream</span>
+        </button>
+    </div>
+    <button class="mdc-button mdc-button--raised" id="share-button">
+        <span class="mdc-button__label">Copy Room Link</span>
+    </button>
 </div>
 <script src="app.js" type="module"></script>
 </body>
